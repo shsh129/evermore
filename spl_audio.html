@@ -1,29 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Special Audio</title>
-</head>
-<body>
-    <h2>Your special audio will play based on the date!</h2>
-    <audio id="audioPlayer" controls></audio>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Valentine's Message</title>
     <script>
-        const audioPlayer = document.getElementById("audioPlayer");
+        var today = new Date();
+        var valentineDate = new Date("February 14, 2025 00:00:00");
 
-        // Define audio file URLs
-        const beforeFeb14Audio = "https://yourhost.com/before_feb14.mp3";
-        const feb14Audio = "https://yourhost.com/feb14.mp3";
-
-        // Get today's date
-        const today = new Date();
-        const targetDate = new Date("2025-02-14");
-
-        // Check if today is before Feb 14
-        if (today < targetDate) {
-            audioPlayer.src = beforeFeb14Audio;
+        if (today < valentineDate) {
+            window.location.href = "https://drive.google.com/file/d/1otIwxhHMLQMjZKwP16-4ElAfMzui6TGH/view?usp=sharing"; // Link to Before Valentine's audio
         } else {
-            audioPlayer.src = feb14Audio;
+            window.location.href = "https://drive.google.com/file/d/1mkolDGRxZkgJascWhWE7_iVy_b_w5O0N/view?usp=sharing"; // Link to After Valentine's audio
         }
     </script>
+</head>
+<body>
+    <p>If you are not redirected, click <a href="https://drive.google.com/file/d/1mkolDGRxZkgJascWhWE7_iVy_b_w5O0N/view?usp=sharing">here</a>.</p>
 </body>
 </html>
