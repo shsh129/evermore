@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Special Audio</title>
+</head>
+<body>
+    <h2>Your special audio will play based on the date!</h2>
+    <audio id="audioPlayer" controls></audio>
+
+    <script>
+        const audioPlayer = document.getElementById("audioPlayer");
+
+        // Define audio file URLs
+        const beforeFeb14Audio = "https://yourhost.com/before_feb14.mp3";
+        const feb14Audio = "https://yourhost.com/feb14.mp3";
+
+        // Get today's date
+        const today = new Date();
+        const targetDate = new Date("2025-02-14");
+
+        // Check if today is before Feb 14
+        if (today < targetDate) {
+            audioPlayer.src = beforeFeb14Audio;
+        } else {
+            audioPlayer.src = feb14Audio;
+        }
+    </script>
+</body>
+</html>
